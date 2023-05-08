@@ -1,6 +1,5 @@
 package br.com.sysmap.parrot.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,21 +11,22 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "usuario")
+
+
+
+@Document(collection = "post")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+public class Post {
 
-public class Usuario {
-
-    @Id 
+    @Id
     private UUID id;
-    private String nome;
-    private String email;
-    private String senha;
-    private List <Post> feed = new ArrayList<>();
-    private List<UUID> amigos = new ArrayList<>();
+    private UUID idUsuario;
+    private String texto;
+    private List<UUID> curtidas;
+    private List<Comentario> comentarios;
 
 
     protected void setId() { this.id = UUID.randomUUID(); }
