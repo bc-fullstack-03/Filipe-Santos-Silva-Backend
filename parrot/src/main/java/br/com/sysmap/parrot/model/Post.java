@@ -22,14 +22,14 @@ import lombok.NoArgsConstructor;
 public class Post {
 
     @Id
-    private UUID id;
-    private UUID idUsuario;
+    private String id;
+    private String idUsuario;
     private String texto;
-    private List<UUID> curtidas;
+    private List<String> curtidas;
     private List<Comentario> comentarios;
 
 
-    protected void setId() { this.id = UUID.randomUUID(); }
+    
 
     
 }

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import br.com.sysmap.parrot.model.Usuario;
 
-public interface UsuarioRepository  extends MongoRepository<Usuario, UUID>{
+public interface UsuarioRepository  extends MongoRepository<Usuario,String>{
 
     Usuario findByEmail(String email);
 

@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UsuarioResposta {
 
-    private UUID id;
+    private String id;
     private String nome;
     private String email;
     

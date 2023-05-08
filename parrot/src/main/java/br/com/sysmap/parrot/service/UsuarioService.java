@@ -8,11 +8,11 @@ public interface UsuarioService {
 
     Usuario salvar(Usuario usuario);
 
-    Usuario buscarPorId(UUID id);
+    Usuario buscarPorId(String id);
 
     Usuario buscarPorEmail(String email);
 
-    Usuario atualizar(UUID id, Usuario usuario);
+    Usuario atualizar(String id, Usuario usuario);
 
-    void deletar(UUID id);
+    void deletar(String id);
 }

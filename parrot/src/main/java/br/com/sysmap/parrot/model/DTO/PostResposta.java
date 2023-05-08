@@ -16,9 +16,9 @@ import lombok.NoArgsConstructor;
 public class PostResposta {
 
  
-    private UUID idUsuario;
+    private String idUsuario;
     private String texto;
-    private List<UUID> curtidas;
+    private List<String> curtidas;
     private List<Comentario> comentarios;
     
 }

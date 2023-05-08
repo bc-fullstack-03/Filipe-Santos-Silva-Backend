@@ -17,12 +17,13 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario salvar(Usuario usuario) {
+     
         usuarioRepository.save(usuario);
         return usuario;
     }
 
     @Override
-    public Usuario buscarPorId(UUID id) {
+    public Usuario buscarPorId(String id) {
         return usuarioRepository.findById(id).get();
     }
 
@@ -32,7 +33,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuario atualizar(UUID id, Usuario usuario) {
+    public Usuario atualizar(String id, Usuario usuario) {
         Usuario usu = usuarioRepository.findById(id).get();
         usu.setNome(usuario.getNome());
         usu.setEmail(usuario.getEmail());
@@ -42,8 +43,10 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void deletar(UUID id) {
+    public void deletar(String id) {
         usuarioRepository.deleteById(id);
     }
+
+    
 
 }

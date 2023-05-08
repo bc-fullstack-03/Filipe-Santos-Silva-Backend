@@ -1,5 +1,6 @@
 package br.com.sysmap.parrot.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import br.com.sysmap.parrot.model.Post;
@@ -8,12 +9,13 @@ public interface PostService {
 
     Post salvar(Post post);
 
-    Post buscarPorId(UUID id);
+    Post buscarPorId(String id);
 
-    Post buscarPorEmail(String email);
+    List<Post> buscarTodos(String idUsuario);
 
-    Post atualizar(UUID id, Post post);
 
-    void deletar(UUID id);
+    Post atualizar(String id, Post post);
+
+    void deletar(String id);
 
 }

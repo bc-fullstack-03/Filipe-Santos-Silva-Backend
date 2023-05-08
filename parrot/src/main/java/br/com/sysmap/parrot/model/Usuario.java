@@ -20,15 +20,13 @@ import lombok.NoArgsConstructor;
 public class Usuario {
 
     @Id
-    private UUID id;
+    private String id;
     private String nome;
     private String email;
     private String senha;
     private List<Post> feed = new ArrayList<>();
     private List<UUID> amigos = new ArrayList<>();
 
-    protected void setId() {
-        this.id = UUID.randomUUID();
-    }
+  
 
 }
