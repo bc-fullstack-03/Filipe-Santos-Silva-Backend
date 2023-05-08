@@ -56,7 +56,7 @@ public class PostController {
         return ResponseEntity.ok(convertToResposta(post));
     }
 
-    @GetMapping({ "/{idUsuario}" })
+    @GetMapping({ "/postusario/{idUsuario}" })
     public List<PostResposta> buscarPorIdUsuario(@PathVariable String idUsuario) {
         log.info("Buscando post por idUsuario");
         List<Post> post = postServiceImpl.buscarTodos(idUsuario);
