@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ComentarioForm {
 
-    private UUID idPost;
-    private UUID idUsuario; // que realiza o comentario
+    private String  idPost;
+    private String idUsuario; // que realiza o comentario
     private String texto;
     
 }
