@@ -8,7 +8,7 @@ import br.com.sysmap.parrot.model.Usuario;
 
 public interface UsuarioRepository  extends MongoRepository<Usuario, UUID>{
 
-    void findByEmail(String email);
+    Usuario findByEmail(String email);
 
     
 }

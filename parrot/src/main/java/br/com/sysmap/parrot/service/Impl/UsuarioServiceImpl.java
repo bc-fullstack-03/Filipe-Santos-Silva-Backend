@@ -28,23 +28,22 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario buscarPorEmail(String email) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscarPorEmail'");
+        return usuarioRepository.findByEmail(email);
     }
 
     @Override
     public Usuario atualizar(UUID id, Usuario usuario) {
-       Usuario usu=  usuarioRepository.findById(id).get();
-             usu.setNome(usuario.getNome());
-            usu.setEmail(usuario.getEmail());
-            usu.setSenha(usuario.getSenha());
-            usuarioRepository.save(usu);    
-            return usu;
+        Usuario usu = usuarioRepository.findById(id).get();
+        usu.setNome(usuario.getNome());
+        usu.setEmail(usuario.getEmail());
+        usu.setSenha(usuario.getSenha());
+        usuarioRepository.save(usu);
+        return usu;
     }
 
     @Override
     public void deletar(UUID id) {
         usuarioRepository.deleteById(id);
     }
-    
+
 }
