@@ -20,5 +20,6 @@ public class PostResposta {
     private String texto;
     private List<String> curtidas;
     private List<Comentario> comentarios;
+   
     
 }

@@ -20,7 +20,9 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post salvar(Post post) {
-        return postRepository.save(post);
+        postRepository.save(post);
+
+        return post;
     }
 
     @Override

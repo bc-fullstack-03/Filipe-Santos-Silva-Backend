@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostForm {
 
-    private UUID idUsuario;
+    private String idUsuario;
     private String texto;
     
 }
