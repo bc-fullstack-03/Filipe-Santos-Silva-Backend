@@ -20,13 +20,11 @@ public class Comentario {
 
 
     @Id
-    private UUID id;
-    //@DBRef(lazy = true)
-    //@JsonBackReference
-    private UUID postId;
-    private UUID usuarioId; // usuario que fez o comentario
+    private String id;
+    private String postId;
+    private String usuarioId; // usuario que fez o comentario
     private String texto;
 
-    protected void setId() { this.id = UUID.randomUUID(); }
+
 
 }

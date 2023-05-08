@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ComentarioResposta {
 
-    private UUID idUsuario; // que realiza o comentario
+    private String idUsuario; // que realiza o comentario
     private String texto;
 
 }
