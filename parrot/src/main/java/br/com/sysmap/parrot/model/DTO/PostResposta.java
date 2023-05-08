@@ -1,7 +1,7 @@
 package br.com.sysmap.parrot.model.DTO;
 
 import java.util.List;
-import java.util.UUID;
+
 
 import br.com.sysmap.parrot.model.Comentario;
 import lombok.AllArgsConstructor;
